@@ -44,7 +44,7 @@
     <div class="youqi_btn cur" @click="$router.push({ path:'youqiguanxian', query: $route.query})"></div>
     <div class="guansui_btn cur" @click="$router.push({ path:'guansui', query: $route.query})"></div>
     <!-- 切换中英文 -->
-    <div class="check_en cur" :class="lang?'en':'cn'" @click="langSelect"></div>
+    <div class="check_en cur rb0-fixed" :class="lang?'en':'cn'" @click="langSelect"></div>
   </div>
 </template>
 

@@ -50,7 +50,7 @@
       class="shudiantwo_btn cur"
       @click="$router.push({ path:'shudianthreetwo', query: $route.query})"
     ></div>
-    <div class="home_btn cur home-icon" @click="tanchuClicks"></div>
+    <div class="home_btn cur home-icon rb0-fixed" @click="tanchuClicks"></div>
   </div>
 </template>
 
