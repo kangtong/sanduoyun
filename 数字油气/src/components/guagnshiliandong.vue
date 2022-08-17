@@ -22,7 +22,7 @@
     <!-- 返回首页 -->
     <img
       src="../assets/imgs/home.png"
-      class="home_btn"
+      class="home_btn rb0-fixed"
       @click="$router.push({ path:'/', query: $route.query})"
     />
   </div>

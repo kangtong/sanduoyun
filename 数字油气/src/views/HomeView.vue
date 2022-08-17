@@ -25,7 +25,7 @@
       @click="$router.push({ path:'guangshiliandong', query: $route.query})"
     > </div>
     <!-- 切换英文 -->
-    <div  :class="lang?'check_en':'check_cn'" @click="langSelect"></div>
+    <div class="rb0-fixed" :class="lang?'check_en':'check_cn'" @click="langSelect"></div>
   </div>
 </template>
 
