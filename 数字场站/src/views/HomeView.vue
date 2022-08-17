@@ -24,7 +24,7 @@
     <!-- 全景感知 -->
     <div :class="lang?'qjgz':'enqjgz'" @click="$router.push({ path:'quanjingganzhi', query: $route.query})"></div>
     <!-- 中英文切换 -->
-    <div class="check" :class="lang?'check_en':'check_cn'" @click="langSelect"></div>
+    <div class="check rb0-fixed" :class="lang?'check_en':'check_cn'" @click="langSelect"></div>
 
   </div>
 </template>
