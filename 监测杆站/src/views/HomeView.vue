@@ -27,13 +27,13 @@
     <img
       v-show="lang"
       src="../assets/imgs/en.png"
-      class="check_en cur"
+      class="check_en cur rb0-fixed"
       @click="langSelect"
     />
     <img
       v-show="!lang"
       src="../assets/imgs/cn.png"
-      class="check_cn cur"
+      class="check_cn cur rb0-fixed"
       @click="langSelect"
     />
   </div>

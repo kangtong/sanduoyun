@@ -21,7 +21,7 @@
       src="../../assets/videos/en/03无电长续航.mp4"
     ></video>
     <img
-      class="home_btn cur"
+      class="home_btn cur rb0-fixed"
       @click="$router.push({ path:'/', query: $route.query})"
       src="../../assets/imgs/home.png"
     />
