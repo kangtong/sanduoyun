@@ -34,7 +34,7 @@
         class="cur" :class="lang?'zhihui':'enzhihui'"
       @click="$router.push({ path: '/zhihui', query: $route.query })"
     ></div>
-    <div class="check_en cur" :class="lang?'en':'cn'" @click="langSelect"></div>
+    <div class="check_en cur rb0-fixed" :class="lang?'en':'cn'" @click="langSelect"></div>
 
   </div>
 </template>

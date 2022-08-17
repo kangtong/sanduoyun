@@ -43,7 +43,7 @@
     <div v-if="lang" class="Fcview_btn cur" @click="$router.push({ path:'FCview', query: $route.query})"></div>
     <div class="cur" :class="lang?'teight_btn':'en_teight_btn'" @click="$router.push({ path:'Teight', query: $route.query})"></div>
     <!-- 中英文切换 -->
-    <div class="check" :class="lang?'en':'cn'" @click="langSelect"></div>
+    <div class="check rb0-fixed" :class="lang?'en':'cn'" @click="langSelect"></div>
   </div>
 </template>
 
