@@ -23,7 +23,7 @@
     <!-- 返回首页 -->
     <img
       @click="$router.push({path:'/',query: $route.query})"
-      class="home_btn cur"
+      class="home_btn cur rb0-fixed"
       src="../../assets/imgs/home.png"
       alt=""
     />
