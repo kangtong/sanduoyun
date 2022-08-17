@@ -44,7 +44,7 @@
     </div>
 
     <div class="opencar cur" @click="$router.push({ path:'/threecar', query: $route.query})"></div>
-    <img class="home_btn cur" @click="video1end" src="../../assets/imgs/home.png" />
+    <img class="home_btn cur rb0-fixed" @click="video1end" src="../../assets/imgs/home.png" />
   </div>
 </template>
 

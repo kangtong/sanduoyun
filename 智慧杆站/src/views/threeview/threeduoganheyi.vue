@@ -42,7 +42,7 @@
       ></video>
     </div>
 
-    <img class="home_btn cur" @click="video1end" src="../../assets/imgs/home.png" />
+    <img class="home_btn cur rb0-fixed" @click="video1end" src="../../assets/imgs/home.png" />
     <div class="close_btn cur" @click="close"></div>
   </div>
 </template>

@@ -26,7 +26,7 @@
     <!-- 智慧节能 -->
     <div class="cur" :class="lang?'zhihuijieneng':'enzhihuijieneng'" @click="$router.push({ path: '/zhihuijieneng', query: $route.query })"></div>
     <!-- 中英文切换 -->
-    <div class="check_en cur" :class="lang?'en':'cn'" @click="langSelect"></div>
+    <div class="check_en cur rb0-fixed" :class="lang?'en':'cn'" @click="langSelect"></div>
   </div>
 </template>
 

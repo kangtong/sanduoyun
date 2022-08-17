@@ -52,3 +52,11 @@ body,
     top: 93%;
     left: 96%;
 }
+.rb0-fixed {
+    top: calc(100% - 78px) !important;
+    left: calc(100% - 78px) !important;
+}
+.rb1-fixed {
+    top: calc(100% - 78px) !important;
+    left: calc(100% - 146px) !important;
+}
