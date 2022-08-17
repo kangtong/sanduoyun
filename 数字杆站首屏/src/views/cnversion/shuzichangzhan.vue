@@ -24,7 +24,7 @@
     <!-- 回到首页 -->
     <img
       @click="$router.push({ path:'/', query: $route.query})"
-      class="home_en"
+      class="home_en rb0-fixed"
       src="../../assets/imgs/home.png"
       alt=""
     />

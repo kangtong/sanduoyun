@@ -59,7 +59,7 @@
     <!-- 返回首页 -->
     <img
       src="../../assets/imgs/home.png"
-      class="home_btn cur"
+      class="home_btn cur rb0-fixed"
       @click="tanchuClicks"
     />
   </div>

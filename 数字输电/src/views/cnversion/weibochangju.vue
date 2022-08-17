@@ -20,13 +20,13 @@
         src="../../assets/videos/en/微波方案.mp4"
     ></video>
     <img
-      class="home_btn"
+      class="home_btn rb0-fixed"
       src="../../assets/imgs/home.png"
       @click="$router.push({ path:'/', query: $route.query})"
     />
     <img
       @click="$router.push({ path:'minjiezuwang', query: $route.query})"
-      class="back_btn"
+      class="back_btn rb1-fixed"
       src="../../assets/imgs/left.png"
       alt=""
     />

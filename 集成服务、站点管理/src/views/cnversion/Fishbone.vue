@@ -20,7 +20,7 @@
         src="../../assets/videos/en/鱼骨.mp4"
     ></video>
     <!-- 返回上一页 -->
-    <div class="home_btn left-icon" @click="$router.push({path:'/parkpro',query: $route.query})"></div>
+    <div class="home_btn left-icon rb0-fixed" @click="$router.push({path:'/parkpro',query: $route.query})"></div>
   </div>
 </template>
 

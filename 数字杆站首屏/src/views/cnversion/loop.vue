@@ -20,7 +20,7 @@
       src=""
     ></video>
     <!-- 返回首页 -->
-    <div class="home_btn" @click="$router.push({ path:'/', query: $route.query})"></div>
+    <div class="home_btn rb0-fixed" @click="$router.push({ path:'/', query: $route.query})"></div>
   </div>
 </template>
 

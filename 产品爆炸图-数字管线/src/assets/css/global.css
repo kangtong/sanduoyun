@@ -47,3 +47,11 @@ body,
     width: 48px !important;
     height: 48px !important;
 }
+.rb0-fixed {
+    top: calc(100% - 78px) !important;
+    left: calc(100% - 78px) !important;
+}
+.rb1-fixed {
+    top: calc(100% - 78px) !important;
+    left: calc(100% - 146px) !important;
+}

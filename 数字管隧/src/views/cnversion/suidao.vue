@@ -20,7 +20,7 @@
         src="../../assets/videos/en/02全息感知+机电监测+应急联动EN.mp4"
     ></video>
     <img
-      class="home_btn"
+      class="home_btn rb0-fixed"
       src="../../assets/imgs/home.png"
       @click="$router.push({ path:'/', query: $route.query})"
     />

@@ -24,9 +24,9 @@
     <!-- 高效集成 -->
     <div class="efficient btn" @click="$router.push({ path:'efficient', query: $route.query})"></div>
     <!-- 下一页 -->
-    <div class="next_btn right-icon" @click="$router.push({ path:'swiperone', query: $route.query})"></div>
+    <div class="next_btn right-icon rb1-fixed" @click="$router.push({ path:'swiperone', query: $route.query})"></div>
     <!-- 返回上一页 -->
-    <div class="home_btn left-icon" @click="$router.push({ path:'/', query: $route.query})"></div>
+    <div class="home_btn left-icon rb0-fixed" @click="$router.push({ path:'/', query: $route.query})"></div>
   </div>
 </template>
 

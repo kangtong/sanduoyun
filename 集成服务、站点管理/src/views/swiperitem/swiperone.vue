@@ -20,14 +20,14 @@
         src="../../assets/videos/en/覆盖规划.mp4"
     ></video>
     <!-- 返回上一页 -->
-    <div class="home_btn left-icon" @click="$router.push({ path:'huaweiopenlab', query: $route.query})"></div>
+    <div class="home_btn left-icon rb0-fixed" @click="$router.push({ path:'huaweiopenlab', query: $route.query})"></div>
     <div class="two userno" @click="$router.push({ path:'swipertwo', query: $route.query})"></div>
     <div class="three userno" @click="$router.push({ path:'swiperthree', query: $route.query})"></div>
     <div class="four userno" @click="$router.push({ path:'swiperfour', query: $route.query})"></div>
     <div class="five userno" @click="$router.push({ path:'swiperfive', query: $route.query})"></div>
     <div class="six userno" @click="$router.push({ path:'swipersix', query: $route.query})"></div>
     <!-- 下一页 -->
-    <div class="next_btn right-icon" @click="$router.push({ path:'fishbone', query: $route.query})"></div>
+    <div class="next_btn right-icon rb1-fixed" @click="$router.push({ path:'fishbone', query: $route.query})"></div>
   </div>
 </template>
 

@@ -48,7 +48,7 @@
       class="openxiaofengtiangu cur"
       @click="$router.push({ path:'/threexiaofengtiangu', query: $route.query})"
     ></div>
-    <img class="cur home_btn" @click="video1end" src="../../assets/imgs/home.png" />
+    <img class="cur home_btn rb0-fixed" @click="video1end" src="../../assets/imgs/home.png" />
   </div>
 </template>
 

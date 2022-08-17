@@ -24,7 +24,7 @@
     <!-- 管廊检测站 -->
     <div :class="lang?'gl':'engl'" @click="$router.push({ path:'guanlang', query: $route.query})"></div>
     <!-- 中英文切换 -->
-    <div :class="lang?'check_en':'check_cn'" @click="langSelect"></div>
+    <div class="rb0-fixed" :class="lang?'check_en':'check_cn'" @click="langSelect"></div>
   </div>
 </template>
 

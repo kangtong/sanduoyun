@@ -43,7 +43,7 @@
     <div class="cur" :class="lang?'youqione_btn':'en_youqione_btn'" @click="$router.push({ path:'youqithreeone', query: $route.query})"></div>
     <div v-show="lang" class="youqitwo_btn cur" @click="$router.push({ path:'youqithreetwo', query: $route.query})"></div>
     <div v-show="lang" class="youqithree_btn cur" @click="$router.push({ path:'youqithree', query: $route.query})"></div>
-    <div class="home_btn cur home-icon" @click="$router.push({ path:'/', query: $route.query})"></div>
+    <div class="home_btn cur home-icon rb0-fixed" @click="$router.push({ path:'/', query: $route.query})"></div>
   </div>
 </template>
 

@@ -28,7 +28,7 @@
 <!--    &lt;!&ndash; 中英文切换 &ndash;&gt;-->
 <!--    <div class="check_en cur" @click="langSelect"></div>-->
     <!-- 中英文切换 -->
-    <div class="check" :class="lang?'en':'cn'" @click="langSelect"></div>
+    <div class="check rb0-fixed" :class="lang?'en':'cn'" @click="langSelect"></div>
   </div>
 </template>
 

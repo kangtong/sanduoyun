@@ -20,7 +20,7 @@
         src="../../assets/videos/en/02数字场站-全景感知EN.mp4"
     ></video>
     <img
-      class="home_btn"
+      class="home_btn rb0-fixed"
       src="../../assets/imgs/home.png"
       @click="$router.push({ path:'/', query: $route.query})"
     />
