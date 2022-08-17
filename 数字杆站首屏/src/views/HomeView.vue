@@ -76,13 +76,13 @@
     <img
       v-show="lang"
       src="../assets/imgs/EN.png"
-      class="check_en cur"
+      class="check_en cur rb0-fixed"
       @click="langSelect"
     />
     <img
       v-show="!lang"
       src="../assets/imgs/CN.png"
-      class="check_en cur"
+      class="check_en cur rb0-fixed"
       @click="langSelect"
     />
     <!-- 痛点 -->
