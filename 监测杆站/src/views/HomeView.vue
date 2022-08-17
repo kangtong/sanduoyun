@@ -84,8 +84,8 @@ export default {
   left: 52.5%;
 }
 .check_cn {
-  width: 2.8%;
-  height: 5%;
+  width: 48px;
+  height: 48px;
   position: absolute;
   top: 93.3%;
   left: 96.3%;
