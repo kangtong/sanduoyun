@@ -24,7 +24,7 @@
     <!-- 集成能力 -->
     <div class="btn" :class="lang?'power':'enpower'" @click="$router.push({ path:'huaweiopenlab', query: $route.query})"></div>
     <!-- 返回上一页 -->
-    <div class="home_btn left-icon" @click="$router.push({ path:'/', query: $route.query})"></div>
+    <div class="home_btn left-icon rb0-fixed" @click="$router.push({ path:'/', query: $route.query})"></div>
   </div>
 </template>
 

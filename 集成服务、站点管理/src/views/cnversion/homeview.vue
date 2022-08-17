@@ -51,7 +51,7 @@
         @click="$router.push({ path:'parkpro', query: $route.query})"
     />
     <!-- 中英文切换 -->
-    <div class="check_en btn" :class="lang?'en':'cn'" @click="langSelect"></div>
+    <div class="check_en btn rb0-fixed" :class="lang?'en':'cn'" @click="langSelect"></div>
   </div>
 </template>
 

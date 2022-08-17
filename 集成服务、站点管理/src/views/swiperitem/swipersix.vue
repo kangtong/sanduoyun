@@ -20,14 +20,14 @@
         src="../../assets/videos/en/验收.mp4"
     ></video>
     <!-- 返回上一页 -->
-    <div class="home_btn left-icon" @click="$router.push({ path:'huaweiopenlab', query: $route.query})"></div>
+    <div class="home_btn left-icon rb0-fixed" @click="$router.push({ path:'huaweiopenlab', query: $route.query})"></div>
     <div class="one userno" @click="$router.push({ path:'swiperone', query: $route.query})"></div>
     <div class="two userno" @click="$router.push({ path:'swipertwo', query: $route.query})"></div>
     <div class="three userno" @click="$router.push({ path:'swiperthree', query: $route.query})"></div>
     <div class="four userno" @click="$router.push({ path:'swiperfour', query: $route.query})"></div>
     <div class="five userno" @click="$router.push({ path:'swiperfive', query: $route.query})"></div>
     <!-- 下一页 -->
-    <div class="next_btn right-icon" @click="$router.push({ path:'fishbone', query: $route.query})"></div>
+    <div class="next_btn right-icon rb1-fixed" @click="$router.push({ path:'fishbone', query: $route.query})"></div>
   </div>
 </template>
 
