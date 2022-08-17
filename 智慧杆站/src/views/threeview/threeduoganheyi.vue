@@ -26,7 +26,6 @@
     <div class="video1container" v-if="!lang && video1show">
       <video
           autoplay
-          loop
           muted
           class="video"
           src="../../assets/video/en/02城市道路 03多杆合一-转.mp4"
