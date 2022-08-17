@@ -1,0 +1,57 @@
+html,
+body,
+#app {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.cur {
+    cursor: pointer;
+    user-select: none;
+}
+
+.home_btn {
+    width: 2.8%;
+    height: 5%;
+    position: absolute;
+    top: 93.3%;
+    left: 96.3%;
+}
+
+.check_en {
+    width: 2.8%;
+    height: 5%;
+    position: absolute;
+    top: 93.3%;
+    left: 96.3%;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.home_btn {
+    width: 2.8%;
+    height: 5%;
+    position: absolute;
+    top: 93.3%;
+    left: 96.3%;
+}
+
+.home {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}

@@ -1,0 +1,44 @@
+
+<template>
+  <div
+    class="home"
+    :style="'width:' + winWCur + 'px;height:' + winHCur + 'px;'"
+  >
+    <video
+      autoplay
+      loop
+      muted
+      class="home_img"
+      src="../../assets/video/en/04管控杆站-超远覆盖，雷视融合-转.mp4"
+    ></video>
+    <!-- 返回首页 -->
+    <img
+      @click="$router.push('/enhome')"
+      class="home_btn cur"
+      src="../../assets/imgs/home.png"
+      alt=""
+    />
+  </div>
+</template>
+
+<script>
+import { myMixins } from "../../assets/js/mixin";
+export default {
+  mixins: [myMixins],
+};
+</script>
+
+<style lang='less' scoped>
+.home_img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.home_btn {
+  width: 2.8%;
+  height: 5%;
+  position: absolute;
+  top: 93.3%;
+  left: 96.3%;
+}
+</style>

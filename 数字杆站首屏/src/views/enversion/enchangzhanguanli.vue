@@ -1,0 +1,47 @@
+<template>
+  <div
+    class="home"
+    :style="'width:' + winWCur + 'px;height:' + winHCur + 'px;'"
+  >
+    <video
+      loop
+      autoplay
+      muted
+      class="home_img"
+      src=""
+    ></video>
+    <!-- 回到首页 -->
+    <img
+      @click="$router.push('/enhomeview')"
+      class="home_en"
+      src="../../assets/imgs/home.png"
+      alt=""
+    />
+  </div>
+</template>
+
+<script>
+import { myMixins } from "../../assets/js/mixin";
+export default {
+  mixins: [myMixins],
+};
+</script>
+<style lang='less' scoped>
+.home_img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.check_en {
+  position: absolute;
+  top: 92%;
+  left: 90%;
+}
+.home_en {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 93%;
+  left: 96%;
+}
+</style>
