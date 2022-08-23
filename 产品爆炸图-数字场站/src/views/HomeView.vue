@@ -62,8 +62,10 @@ export default {
       this.video1show = false;
       this.video2show = true;
       localStorage.setItem("yunbianxietong1", this.video1show);
+      this.updateVideoState()
     },
     updateVideoState() {
+      console.log('updateVideoState', this.video1show, this.video2show, this.lang)
       if (this.video1show) {
         if (this.lang) {
           this.$refs.video1en.pause()

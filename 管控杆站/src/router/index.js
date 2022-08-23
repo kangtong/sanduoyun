@@ -26,24 +26,6 @@ const routes = [{
     path: '/chaoyuantance',
     component: () => import('../views/cnversion/chaoyuantance.vue')
   }
-  // 英文版
-  ,
-  {
-    path: '/enchaoyuantance',
-    component: () => import('../views/enversion/enchaoyuantance.vue')
-  },
-  {
-    path: '/enchedaodingwei',
-    component: () => import('../views/enversion/enchedaodingwei.vue')
-  },
-  {
-    path: '/enkanghuangdong',
-    component: () => import('../views/enversion/enkanghuangdong.vue')
-  },
-  {
-    path: '/enhome',
-    component: () => import('../views/enhome.vue')
-  }
 ]
 
 const router = new VueRouter({

@@ -49,9 +49,10 @@
       @click="$router.push({ path:'/', query: $route.query})"
       src="../../assets/imgs/home.png"
     />
-    <div class="cur" :class="lang?'openstreetlamp':'enopenstreetlamp'" @click="$router.push({ path:'threestreetlamp', query: $route.query})"></div>
+    <div v-if="video2show" class="cur" :class="lang?'openstreetlamp':'enopenstreetlamp'" @click="$router.push({ path:'threestreetlamp', query: $route.query})"></div>
     <div
-      class="cur" :class="lang?'openxiaofengtiangu':'enopenxiaofengtiangu'"
+        v-if="video2show"
+        class="cur" :class="lang?'openxiaofengtiangu':'enopenxiaofengtiangu'"
       @click="$router.push({ path:'threexiaofengtiangu', query: $route.query})"
     ></div>
   </div>

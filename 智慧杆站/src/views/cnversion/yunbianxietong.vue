@@ -49,10 +49,11 @@
       src="../../assets/imgs/home.png"
     />
     <div
-      class="openmanholecover cur"
+        v-if="video2show"
+        class="openmanholecover cur"
       @click="$router.push({ path:'threemanholcover', query: $route.query})"
     ></div>
-    <div class="opencar cur" @click="$router.push({ path:'threecar', query: $route.query})"></div>
+    <div v-if="video2show" class="opencar cur" @click="$router.push({ path:'threecar', query: $route.query})"></div>
   </div>
 </template>
 

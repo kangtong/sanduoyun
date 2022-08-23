@@ -57,17 +57,20 @@
     </div>
     <!-- 数字杆站 -->
     <div
+        v-if="video2show"
       :class="lang ? 'shuziganzhan' : 'enshuziganzhan'"
       @click="$router.push({ path: 'shuziganzhan', query: $route.query })"
     ></div>
     <!-- 数字管线 -->
     <div
-      :class="lang ? 'shuziguanxian' : 'enshuziguanxian'"
+        v-if="video2show"
+        :class="lang ? 'shuziguanxian' : 'enshuziguanxian'"
       @click="$router.push({ path: 'shuziguanxian', query: $route.query })"
     ></div>
     <!-- 数字场站 -->
     <div
-      :class="lang ? 'shuzichangzhan' : 'enshuzichangzhan'"
+        v-if="video2show"
+        :class="lang ? 'shuzichangzhan' : 'enshuzichangzhan'"
       @click="$router.push({ path: 'shuzichangzhan', query: $route.query })"
     ></div>
     <!-- 中英文切换按钮 -->
