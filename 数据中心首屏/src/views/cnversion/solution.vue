@@ -19,18 +19,6 @@
         class="video"
         src="../../assets/video/en/4k版本-尾页1.mp4"
     ></video>
-    <!-- 国家一体化大数据中心 -->
-    <div class="guojiayitihua cur" @click="$router.push({ path: '/dongshuxisuan', query: $route.query })"></div>
-    <!-- 小型数据中心 -->
-    <div class="xiaoxingshuju cur" @click="$router.push({ path: '/littledc', query: $route.query })"></div>
-    <!-- 集中式数据中心 -->
-    <div class="jizhongshishuju cur" @click="$router.push({ path: '/resourcepool', query: $route.query })"></div>
-    <!-- 多级数据中心 -->
-    <div class="duojishuju cur" @click="$router.push({ path: '/yunwei', query: $route.query })"></div>
-    <!-- 人工智能计算中心 -->
-    <div class="rengongzhineng cur" @click="$router.push({ path: '/aiintelligence', query: $route.query })"></div>
-    <!-- 高性能计算中心 -->
-    <div class="gaoxingnengjisuan cur" @click="$router.push({ path: '/hieightmathcenter', query: $route.query })"></div>
     <!-- 趋势与挑战 -->
     <img
         @click="$router.push({ path: '/challenge', query: $route.query })"
