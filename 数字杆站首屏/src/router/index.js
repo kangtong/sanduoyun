@@ -93,51 +93,7 @@ const routes = [{
   {
     path: '/loop',
     component: () => import('../views/cnversion/loop.vue')
-  },
-  //英文版
-  {
-    path: '/enhomeview',
-    component: () => import('../views/enhomeview.vue')
-  },
-  // 痛点
-  {
-    path: '/enpainpoint',
-    component: () => import('../views/enversion/enPainpoint.vue')
-  },
-  // 解决方案
-  {
-    path: '/ensolution',
-    component: () => import('../views/enversion/enSolution.vue')
-  },
-  {
-    path: '/enchangzhanguanli',
-    component: () => import('../views/enversion/enchangzhanguanli.vue')
-  },
-  {
-    path: '/enduoganheyi',
-    component: () => import('../views/enversion/enduoganheyi.vue')
-  },
-  {
-    path: '/enguansuijiance',
-    component: () => import('../views/enversion/enguansuijiance.vue')
-  },
-  {
-    path: '/enhuanjingjiance',
-    component: () => import('../views/enversion/enhuanjingjiance.vue')
-  },
-  {
-    path: '/enquanluganzhi',
-    component: () => import('../views/enversion/enquanluganzhi.vue')
-  },
-  {
-    path: '/enxianluxunjian',
-    component: () => import('../views/enversion/enxianluxunjian.vue')
-  },
-  // 智能开放
-  {
-    path: '/enloop',
-    component: () => import('../views/enversion/enloop.vue')
-  },
+  }
 ]
 
 const router = new VueRouter({

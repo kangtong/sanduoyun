@@ -17,19 +17,6 @@ const routes = [{
   {
     path: '/wuwangwenhuichuan',
     component: () => import('../views/homechildren/wuwangwenhuichuan.vue')
-  },
-  // 英文版
-  {
-    path: '/enwudianchangxuhang',
-    component: () => import('../views/enversion/enwudianchangxuhang.vue')
-  },
-  {
-    path: '/enwuwangwenhuichuan',
-    component: () => import('../views/enversion/enwuwangwenhuichuan.vue')
-  },
-  {
-    path: '/enhomeview',
-    component: () => import('../views/enversion/enhomeview.vue')
   }
 ]
 
