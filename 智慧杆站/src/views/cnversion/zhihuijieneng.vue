@@ -25,6 +25,7 @@
       </div>
       <div class="video2container" v-show="video3show">
         <video
+            ref="video3"
             @ended="toPause"
             autoplay
             muted
@@ -54,6 +55,7 @@
       </div>
       <div class="video2container" v-show="video3show">
         <video
+            ref="video3"
             @ended="toPause"
             autoplay
             muted
@@ -91,6 +93,9 @@ export default {
   },
   methods: {
     video1end() {
+      if (!this.video1show) {
+        return
+      }
       this.video2show = true;
       this.video1show = false;
       this.video3show = false
@@ -103,9 +108,11 @@ export default {
       this.$router.push({ path:'/', query: this.$route.query});
     },
     close() {
+      this.$refs.video3.pause()
       this.video3show = true
       this.video2show = false
       this.video1show = false
+      this.$refs.video3.play()
     }
   },
 };
