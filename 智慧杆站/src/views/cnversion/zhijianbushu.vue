@@ -50,6 +50,7 @@
       src="../../assets/imgs/home.png"
     />
     <div
+        v-if="video2show"
       class="openduoganheyi cur"
       @click="$router.push({ path:'/threeduoganheyi', query: $route.query})"
     ></div>
