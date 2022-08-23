@@ -4,43 +4,44 @@
     class="home"
     :style="'width:' + winWCur + 'px;height:' + winHCur + 'px;'"
   >
-    <div class="video1container" v-if="lang && video1show">
-      <video
-        autoplay
-        muted
-        class="video"
-        src="../../assets/video/cn/02城市道路 03多杆合一.mp4"
-      ></video>
-    </div>
-    <div class="video2container" v-if="lang && video2show">
-      <video
-        @ended="toPause"
-        autoplay
-        muted
-        class="video"
-        src="../../assets/video/cn/02城市道路 04多杆合一出场-转.mp4"
-      ></video>
-    </div>
-
-
-    <div class="video1container" v-if="!lang && video1show">
-      <video
-          autoplay
-          muted
-          class="video"
-          src="../../assets/video/en/02城市道路 03多杆合一-转.mp4"
-      ></video>
-    </div>
-    <div class="video2container" v-if="!lang && video2show">
-      <video
-          @pause="toPause"
-          autoplay
-          muted
-          class="video"
-          src="../../assets/video/en/02城市道路 04多杆合一出场-转.mp4"
-      ></video>
-    </div>
-
+    <template v-if="lang">
+      <div class="video1container" v-show="video1show">
+        <video
+            autoplay
+            muted
+            class="video"
+            src="../../assets/video/cn/02城市道路 03多杆合一.mp4"
+        ></video>
+      </div>
+      <div class="video2container" v-show="video2show">
+        <video
+            @ended="toPause"
+            autoplay
+            muted
+            class="video"
+            src="../../assets/video/cn/02城市道路 04多杆合一出场-转.mp4"
+        ></video>
+      </div>
+    </template>
+    <template v-else>
+      <div class="video1container" v-show="video1show">
+        <video
+            autoplay
+            muted
+            class="video"
+            src="../../assets/video/en/02城市道路 03多杆合一-转.mp4"
+        ></video>
+      </div>
+      <div class="video2container" v-show="video2show">
+        <video
+            @pause="toPause"
+            autoplay
+            muted
+            class="video"
+            src="../../assets/video/en/02城市道路 04多杆合一出场-转.mp4"
+        ></video>
+      </div>
+    </template>
     <img class="home_btn cur rb0-fixed" @click="video1end" src="../../assets/imgs/home.png" />
     <img class="close_btn cur rb1-fixed" @click="close" src="../../assets/imgs/left.png" />
   </div>

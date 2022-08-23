@@ -4,47 +4,46 @@
     class="home"
     :style="'width:' + winWCur + 'px;height:' + winHCur + 'px;'"
   >
-    <div class="video1container" v-if="lang && video1show">
-      <video
-        autoplay
-        loop
-        muted
-        class="video"
-        src="../../assets/video/cn/03城市道路 04云边协同汽车-转.mp4"
-      ></video>
-    </div>
-    <div class="video2container" v-if="lang && video2show">
-      <video
-        @ended="toPause"
-        autoplay
-        muted
-        class="video"
-        src="../../assets/video/cn/03城市道路 05云边协同出场-转.mp4"
-      ></video>
-    </div>
-
-
-    <div class="video1container" v-if="!lang && video1show">
-      <video
-          autoplay
-          loop
-          muted
-          class="video"
-          src="../../assets/video/en/03城市道路 04云边协同汽车-转.mp4"
-      ></video>
-    </div>
-    <div class="video2container" v-if="!lang && video2show">
-      <video
-          @pause="toPause"
-          autoplay
-          muted
-          class="video"
-          src="../../assets/video/en/03城市道路 05云边协同出场-转.mp4"
-      ></video>
-    </div>
-
-
-
+    <template v-if="lang">
+      <div class="video1container" v-show="video1show">
+        <video
+            autoplay
+            loop
+            muted
+            class="video"
+            src="../../assets/video/cn/03城市道路 04云边协同汽车-转.mp4"
+        ></video>
+      </div>
+      <div class="video2container" v-show="video2show">
+        <video
+            @ended="toPause"
+            autoplay
+            muted
+            class="video"
+            src="../../assets/video/cn/03城市道路 05云边协同出场-转.mp4"
+        ></video>
+      </div>
+    </template>
+    <template v-else="lang">
+      <div class="video1container" v-show="video1show">
+        <video
+            autoplay
+            loop
+            muted
+            class="video"
+            src="../../assets/video/en/03城市道路 04云边协同汽车-转.mp4"
+        ></video>
+      </div>
+      <div class="video2container" v-show="video2show">
+        <video
+            @pause="toPause"
+            autoplay
+            muted
+            class="video"
+            src="../../assets/video/en/03城市道路 05云边协同出场-转.mp4"
+        ></video>
+      </div>
+    </template>
     <div
       class="openmanholecover cur"
       @click="$router.push({ path:'/threemanholcover', query: $route.query})"

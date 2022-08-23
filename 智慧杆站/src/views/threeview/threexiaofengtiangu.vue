@@ -4,44 +4,46 @@
     class="home"
     :style="'width:' + winWCur + 'px;height:' + winHCur + 'px;'"
   >
-    <div class="video1container" v-if="lang && video1show">
-      <video
-        autoplay
-        loop
-        muted
-        class="video"
-        src="../../assets/video/cn/04城市道路 03智慧节能削峰填谷-转.mp4"
-      ></video>
-    </div>
-    <div class="video2container" v-if="lang && video2show">
-      <video
-        @ended="toPause"
-        autoplay
-        muted
-        class="video"
-        src="../../assets/video/cn/04城市道路 05智慧节能智到首页-转.mp4"
-      ></video>
-    </div>
-
-    <div class="video1container" v-if="!lang && video1show">
-      <video
-          autoplay
-          loop
-          muted
-          class="video"
-          src="../../assets/video/en/04城市道路 03智慧节能削峰填谷-转.mp4"
-      ></video>
-    </div>
-    <div class="video2container" v-if="!lang && video2show">
-      <video
-          @pause="toPause"
-          autoplay
-          muted
-          class="video"
-          src="../../assets/video/en/04城市道路 05智慧节能智到首页-转.mp4"
-      ></video>
-    </div>
-
+    <template v-if="lang">
+      <div class="video1container" v-show="video1show">
+        <video
+            autoplay
+            loop
+            muted
+            class="video"
+            src="../../assets/video/cn/04城市道路 03智慧节能削峰填谷-转.mp4"
+        ></video>
+      </div>
+      <div class="video2container" v-show="video2show">
+        <video
+            @ended="toPause"
+            autoplay
+            muted
+            class="video"
+            src="../../assets/video/cn/04城市道路 05智慧节能智到首页-转.mp4"
+        ></video>
+      </div>
+    </template>
+    <template v-else>
+      <div class="video1container" v-show="video1show">
+        <video
+            autoplay
+            loop
+            muted
+            class="video"
+            src="../../assets/video/en/04城市道路 03智慧节能削峰填谷-转.mp4"
+        ></video>
+      </div>
+      <div class="video2container" v-show="video2show">
+        <video
+            @pause="toPause"
+            autoplay
+            muted
+            class="video"
+            src="../../assets/video/en/04城市道路 05智慧节能智到首页-转.mp4"
+        ></video>
+      </div>
+    </template>
     <div class="openstreetlamp cur" @click="$router.push({ path:'/threestreetlamp', query: $route.query})"></div>
     <img class="home_btn cur rb0-fixed" @click="video1end" src="../../assets/imgs/home.png" />
   </div>

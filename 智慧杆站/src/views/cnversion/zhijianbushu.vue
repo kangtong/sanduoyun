@@ -4,7 +4,7 @@
     :style="'width:' + winWCur + 'px;height:' + winHCur + 'px;'"
   >
     <template v-if="lang">
-      <div class="video1container" v-if="video1show">
+      <div class="video1container" v-show="video1show">
         <video
             class="video"
             @ended="video1end"
@@ -33,7 +33,7 @@
       </div>
     </template>
     <template v-else>
-      <div class="video1container" v-if="video1show">
+      <div class="video1container" v-show="video1show">
         <video
             class="video"
             @ended="video1end"
