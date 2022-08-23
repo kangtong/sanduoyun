@@ -3,50 +3,68 @@
     class="home"
     :style="'width:' + winWCur + 'px;height:' + winHCur + 'px;'"
   >
-    <div class="video1container" v-if="lang && video1show">
-      <video
-        class="video"
-        @ended="video1end"
-        muted
-        autoplay
-        src="../../assets/video/cn/02城市道路 01多杆合一入场.mp4"
-      ></video>
-    </div>
-    <div class="video2container" v-show="lang && video2show">
-      <video
-        class="video"
-        loop
-        muted
-        autoplay
-        src="../../assets/video/cn/02城市道路 02多杆合一首页循环.mp4"
-      ></video>
-    </div>
-
-
-
-    <div class="video1container" v-if="!lang && video1show">
-      <video
-          class="video"
-          @ended="video1end"
-          muted
-          autoplay
-          src="../../assets/video/en/02城市道路 01多杆合一入场-转.mp4"
-      ></video>
-    </div>
-    <div class="video2container" v-show="!lang && video2show">
-      <video
-          class="video"
-          loop
-          muted
-          autoplay
-          src="../../assets/video/en/02城市道路 02多杆合一首页循环-转.mp4"
-      ></video>
-    </div>
-
+    <template v-if="lang">
+      <div class="video1container" v-if="video1show">
+        <video
+            class="video"
+            @ended="video1end"
+            muted
+            autoplay
+            src="../../assets/video/cn/02城市道路 01多杆合一入场.mp4"
+        ></video>
+      </div>
+      <div class="video2container" v-show="video2show">
+        <video
+            class="video"
+            loop
+            muted
+            autoplay
+            src="../../assets/video/cn/02城市道路 02多杆合一首页循环.mp4"
+        ></video>
+      </div>
+      <div class="video2container" v-show="video3show">
+        <video
+            @ended="toPause"
+            autoplay
+            muted
+            class="video"
+            src="../../assets/video/cn/02城市道路 04多杆合一出场-转.mp4"
+        ></video>
+      </div>
+    </template>
+    <template v-else>
+      <div class="video1container" v-if="video1show">
+        <video
+            class="video"
+            @ended="video1end"
+            muted
+            autoplay
+            src="../../assets/video/en/02城市道路 01多杆合一入场-转.mp4"
+        ></video>
+      </div>
+      <div class="video2container" v-show="video2show">
+        <video
+            class="video"
+            loop
+            muted
+            autoplay
+            src="../../assets/video/en/02城市道路 02多杆合一首页循环-转.mp4"
+        ></video>
+      </div>
+      <div class="video2container" v-show="video3show">
+        <video
+            @ended="toPause"
+            autoplay
+            muted
+            class="video"
+            src="../../assets/video/en/02城市道路 04多杆合一出场-转.mp4"
+        ></video>
+      </div>
+    </template>
     <!-- 返回首页 -->
     <img
       class="home_btn cur rb0-fixed"
-      @click="$router.push({ path:'/', query: $route.query})"
+      @click="close"
       src="../../assets/imgs/home.png"
     />
     <div
@@ -65,22 +83,35 @@ export default {
     return {
       video1show: true,
       video2show: false,
+      video3show: false
     };
   },
   methods: {
     video1end() {
-      this.video1show = false;
-      this.video2show = true;
+      this.video2show = true
+      this.video1show = false
+      this.video3show = false
       sessionStorage.setItem("zhijianbushu1", this.video1show);
     },
+    toPause() {
+      console.log('toPause')
+      this.$router.push({ path:'/', query: this.$route.query});
+    },
+    close() {
+      this.video3show = true
+      this.video2show = false
+      this.video1show = false
+    }
   },
   mounted() {
     if (localStorage.getItem("isShow") == "true") {
-      this.video1show = false;
       this.video2show = true;
+      this.video1show = false;
+      this.video3show = false
     } else {
       this.video1show = true;
       this.video2show = false;
+      this.video3show = false
     }
   },
 };

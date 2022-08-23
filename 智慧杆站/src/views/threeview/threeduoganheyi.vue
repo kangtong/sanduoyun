@@ -66,7 +66,6 @@ export default {
       this.video2show = true;
     },
     close() {
-      console.log('close')
       localStorage.setItem("isShow", true);
       this.$router.push({ path:'/zhijianbushu', query: this.$route.query})
     }
