@@ -94,7 +94,9 @@ export default {
       sessionStorage.setItem("zhijianbushu1", this.video1show);
     },
     toPause() {
-      console.log('toPause')
+      if (!this.video3show) {
+        return
+      }
       this.$router.push({ path:'/', query: this.$route.query});
     },
     close() {

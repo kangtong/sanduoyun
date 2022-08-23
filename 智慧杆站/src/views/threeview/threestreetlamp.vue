@@ -64,6 +64,9 @@ export default {
   },
   methods: {
     toPause() {
+      if (!this.video2show) {
+        return
+      }
       this.$router.push({ path:'/', query: this.$route.query});
     },
     video1end() {
