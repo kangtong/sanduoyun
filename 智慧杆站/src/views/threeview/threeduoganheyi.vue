@@ -42,7 +42,7 @@
     </div>
 
     <img class="home_btn cur rb0-fixed" @click="video1end" src="../../assets/imgs/home.png" />
-    <div class="close_btn cur" @click="close"></div>
+    <img class="close_btn cur rb1-fixed" @click="close" src="../../assets/imgs/left.png" />
   </div>
 </template>
 
@@ -93,8 +93,8 @@ export default {
   }
 }
 .close_btn {
-  width: 4%;
-  height: 8%;
+  width: 48px;
+  height: 48px;
   position: absolute;
   top: 17%;
   left: 81%;
