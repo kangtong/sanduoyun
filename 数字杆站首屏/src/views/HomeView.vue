@@ -115,12 +115,11 @@ export default {
     },
   },
   created() {
-    var flat = localStorage.getItem("saasasis");
+    var flat = sessionStorage.getItem("saasasis");
     console.log(flat);
     flat == "false" ? (flat = false) : (flat = true);
     this.video1show = flat;
     this.video2show = !flat;
-    sessionStorage.setItem("saasasis", true);
   },
 };
 </script>

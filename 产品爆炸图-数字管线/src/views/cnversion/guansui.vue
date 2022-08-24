@@ -69,6 +69,7 @@ export default {
     console.log(flat);
     this.video1show = flat;
     this.video2show = !flat;
+    sessionStorage.setItem('didEnter', true)
   },
 };
 </script>
