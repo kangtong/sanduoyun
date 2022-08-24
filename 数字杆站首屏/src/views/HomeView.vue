@@ -39,7 +39,8 @@
     </div>
     <div class="video2container" v-show="video2show">
       <video
-        v-show="lang"
+          ref="video2cn"
+          v-show="lang"
         class="home_img"
         autoplay
         loop
@@ -47,7 +48,8 @@
         src="../assets/videos/cn/002_1.mp4"
       ></video>
       <video
-        v-show="!lang"
+          ref="video2en"
+          v-show="!lang"
         class="home_img"
         autoplay
         loop
@@ -107,10 +109,20 @@ export default {
       video2show: false,
     };
   },
+  computed: {
+    video() {
+      return this.lang ? this.$refs.video2cn : this.$refs.video2en
+    }
+  },
   methods: {
     video1end() {
-      this.video1show = false;
-      this.video2show = true;
+      this.video.pause()
+      this.video.currentTime = 0
+      this.video.play()
+      this.$nextTick(() => {
+        this.video1show = false;
+        this.video2show = true;
+      })
       sessionStorage.setItem("saasasis", this.video1show);
     },
   },
@@ -121,6 +133,12 @@ export default {
     this.video1show = flat;
     this.video2show = !flat;
   },
+  mounted() {
+    if (this.video2show === false) {
+      this.video.pause()
+      this.video.currentTime = 0
+    }
+  }
 };
 </script>
 <style lang='less' scoped>

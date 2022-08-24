@@ -26,6 +26,7 @@
       <video
           v-show="lang"
           class="video"
+          ref="video2cn"
           :autoplay="lang"
         loop
         muted
@@ -34,6 +35,7 @@
       <video
           v-show="!lang"
           class="video"
+          ref="video2en"
           :autoplay="!lang"
           loop
           muted
@@ -57,20 +59,35 @@ export default {
       video2show: false,
     };
   },
+  computed: {
+    video() {
+      return this.lang ? this.$refs.video2cn : this.$refs.video2en
+    }
+  },
   methods: {
     video1end() {
-      this.video1show = false;
-      this.video2show = true;
+      this.video.pause()
+      this.video.currentTime = 0
+      this.video.play()
+      this.$nextTick(() => {
+        this.video1show = false;
+        this.video2show = true;
+      })
     },
   },
   created() {
     var flat = localStorage.getItem("guansui");
     flat == "false" ? (flat = false) : (flat = true);
-    console.log(flat);
     this.video1show = flat;
     this.video2show = !flat;
     sessionStorage.setItem('didEnter', true)
   },
+  mounted() {
+    if (this.video2show === false) {
+      this.video.pause()
+      this.video.currentTime = 0
+    }
+  }
 };
 </script>
 

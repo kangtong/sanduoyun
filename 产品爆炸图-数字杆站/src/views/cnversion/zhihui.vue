@@ -15,7 +15,8 @@
     </div>
     <div class="video2container" v-show="lang && video2show">
       <video
-        class="video"
+          ref="video2cn"
+          class="video"
         autoplay
         loop
         muted
@@ -34,6 +35,7 @@
     </div>
     <div class="video2container" v-show="!lang && video2show">
       <video
+          ref="video2en"
           class="video"
           autoplay
           loop
@@ -72,10 +74,20 @@ export default {
       video2show: false,
     };
   },
+  computed: {
+    video() {
+      return this.lang ? this.$refs.video2cn : this.$refs.video2en
+    }
+  },
   methods: {
     video1end() {
-      this.video1show = false;
-      this.video2show = true;
+      this.video.pause()
+      this.video.currentTime = 0
+      this.video.play()
+      this.$nextTick(() => {
+        this.video1show = false;
+        this.video2show = true;
+      })
     },
     tanchuClicks() {
       this.video1show = false;
@@ -92,6 +104,12 @@ export default {
   created() {
     this.init()
   },
+  mounted() {
+    if (this.video2show === false) {
+      this.video.pause()
+      this.video.currentTime = 0
+    }
+  }
 };
 </script>
 

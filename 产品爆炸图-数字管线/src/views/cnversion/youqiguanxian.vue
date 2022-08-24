@@ -27,7 +27,8 @@
           v-show="lang"
           class="video"
           :autoplay="lang"
-        loop
+          ref="video2cn"
+          loop
         muted
         src="../../assets/videos/cn/数字管线-2-循环.mp4"
       ></video>
@@ -35,6 +36,7 @@
           v-show="!lang"
           class="video"
           :autoplay="!lang"
+          ref="video2en"
           loop
           muted
           src="../../assets/videos/en/数字管线-2-循环-en.mp4"
@@ -57,10 +59,20 @@ export default {
       video2show: false,
     };
   },
+  computed: {
+    video() {
+      return this.lang ? this.$refs.video2cn : this.$refs.video2en
+    }
+  },
   methods: {
     video1end() {
-      this.video1show = false;
-      this.video2show = true;
+      this.video.pause()
+      this.video.currentTime = 0
+      this.video.play()
+      this.$nextTick(() => {
+        this.video1show = false;
+        this.video2show = true;
+      })
     },
   },
   created() {
@@ -71,6 +83,12 @@ export default {
     this.video2show = !flat;
     sessionStorage.setItem('didEnter', true)
   },
+  mounted() {
+    if (this.video2show === false) {
+      this.video.pause()
+      this.video.currentTime = 0
+    }
+  }
 };
 </script>
 
