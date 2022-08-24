@@ -29,6 +29,7 @@ body,
     position: absolute;
     top: 90.8%;
     left: 1.7%;
+    z-index: 1;
 }
 
 .three {
@@ -39,6 +40,7 @@ body,
     position: absolute;
     top: 95.1%;
     left: 1.7%;
+    z-index: 1;
 }
 
 .four {
