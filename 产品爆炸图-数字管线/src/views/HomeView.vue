@@ -65,6 +65,10 @@ export default {
     },
   },
   created() {
+    if (sessionStorage.getItem('didEnter')) {
+      this.video1show = false
+      this.video2show = true
+    }
     localStorage.setItem("shudian", true);
     localStorage.setItem("youqi", true);
     localStorage.setItem("guansui", true);

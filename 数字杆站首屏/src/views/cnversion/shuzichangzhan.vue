@@ -35,6 +35,9 @@
 import { myMixins } from "../../assets/js/mixin";
 export default {
   mixins: [myMixins],
+  created() {
+    sessionStorage.setItem("saasasis", false);
+  }
 };
 </script>
 <style lang='less' scoped>
