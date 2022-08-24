@@ -40,9 +40,9 @@
           src="../assets/videos/en/数字管线-首页-循环-en.mp4"
       ></video>
     </div>
-    <div class="shudian_btn cur" @click="$router.push({ path:'shudianxianlu', query: $route.query})"></div>
-    <div class="youqi_btn cur" @click="$router.push({ path:'youqiguanxian', query: $route.query})"></div>
-    <div class="guansui_btn cur" @click="$router.push({ path:'guansui', query: $route.query})"></div>
+    <div v-show="video2show" class="shudian_btn cur" @click="$router.push({ path:'shudianxianlu', query: $route.query})"></div>
+    <div v-show="video2show" class="youqi_btn cur" @click="$router.push({ path:'youqiguanxian', query: $route.query})"></div>
+    <div v-show="video2show" class="guansui_btn cur" @click="$router.push({ path:'guansui', query: $route.query})"></div>
     <!-- 切换中英文 -->
     <div class="check_en cur rb0-fixed" :class="lang?'en':'cn'" @click="langSelect"></div>
   </div>

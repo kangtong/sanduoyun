@@ -45,14 +45,17 @@
 
 
     <div
+        v-show="video2show"
       class="jianceone_btn cur"
       @click="$router.push({ path: '/jianceone', query: $route.query })"
     ></div>
     <div
+        v-show="video2show"
       class="jiancetwo_btn cur"
       @click="$router.push({ path: '/jiancetwo', query: $route.query })"
     ></div>
     <div
+        v-show="video2show"
       class="jiancethree_btn cur"
       @click="$router.push({ path: '/jiancethree', query: $route.query })"
     ></div>

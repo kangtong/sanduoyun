@@ -40,8 +40,8 @@
           src="../assets/videos/en/数字场站-循环-en.mp4"
       ></video>
     </div>
-    <div v-if="lang" class="Fcview_btn cur" @click="$router.push({ path:'FCview', query: $route.query})"></div>
-    <div class="cur" :class="lang?'teight_btn':'en_teight_btn'" @click="$router.push({ path:'Teight', query: $route.query})"></div>
+    <div v-show="video2show" v-if="lang" class="Fcview_btn cur" @click="$router.push({ path:'FCview', query: $route.query})"></div>
+    <div v-show="video2show" class="cur" :class="lang?'teight_btn':'en_teight_btn'" @click="$router.push({ path:'Teight', query: $route.query})"></div>
     <!-- 中英文切换 -->
     <div class="check rb0-fixed" :class="lang?'en':'cn'" @click="langSelect"></div>
   </div>
