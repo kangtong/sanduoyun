@@ -41,12 +41,13 @@
       ></video>
     </div>
     <div
+        v-show="video2show"
         class="cur"
       :class="lang?'shudianone_btn':'en_shudianone_btn'"
       @click="$router.push({ path:'shudianthreeone', query: $route.query})"
     ></div>
     <div
-        v-show="lang"
+        v-show="lang && video2show"
       class="shudiantwo_btn cur"
       @click="$router.push({ path:'shudianthreetwo', query: $route.query})"
     ></div>

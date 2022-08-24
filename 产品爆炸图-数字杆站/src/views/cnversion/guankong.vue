@@ -43,10 +43,12 @@
     </div>
 
     <div
+        v-show="video2show"
         class="guankongone_btn cur"
         @click="$router.push({ path: '/guankongone', query: $route.query })"
     ></div>
     <div
+        v-show="video2show"
         class="guankongtwo_btn cur"
         @click="$router.push({ path: '/guankongtwo', query: $route.query })"
     ></div>

@@ -40,9 +40,9 @@
           src="../../assets/videos/en/数字管线-3-循环-en.mp4"
       ></video>
     </div>
-    <div class="cur" :class="lang?'guansuione_btn':'en_guansuione_btn'" @click="$router.push({ path:'guansuione', query: $route.query})"></div>
-    <div class="cur" :class="lang?'guansuitwo_btn':'en_guansuitwo_btn'" @click="$router.push({ path:'guansuitwo', query: $route.query})"></div>
-    <div v-show="lang" class="guansuithree_btn cur" @click="$router.push({ path:'guansuithree', query: $route.query})"></div>
+    <div v-show="video2show" class="cur" :class="lang?'guansuione_btn':'en_guansuione_btn'" @click="$router.push({ path:'guansuione', query: $route.query})"></div>
+    <div v-show="video2show" class="cur" :class="lang?'guansuitwo_btn':'en_guansuitwo_btn'" @click="$router.push({ path:'guansuitwo', query: $route.query})"></div>
+    <div v-show="lang && video2show" class="guansuithree_btn cur" @click="$router.push({ path:'guansuithree', query: $route.query})"></div>
     <div class="home_btn cur home-icon rb0-fixed" @click="$router.push({ path:'/', query: $route.query})"></div>
   </div>
 </template>

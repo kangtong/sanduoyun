@@ -44,10 +44,12 @@
 
 
     <div
+        v-show="video2show"
       class="zhihuione_btn cur"
       @click="$router.push({ path: '/zhihuione', query: $route.query })"
     ></div>
     <div
+        v-show="video2show"
       class="zhihuitwo_btn cur"
       @click="$router.push({ path: '/zhihuitwo', query: $route.query })"
     ></div>
