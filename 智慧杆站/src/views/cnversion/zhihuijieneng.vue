@@ -5,7 +5,7 @@
     :style="'width:' + winWCur + 'px;height:' + winHCur + 'px;'"
   >
     <template v-if="lang">
-      <div class="video1container" v-if="video1show">
+      <div class="video1container" v-show="video1show">
         <video
             class="video"
             @ended="video1end"
@@ -25,6 +25,7 @@
       </div>
       <div class="video2container" v-show="video3show">
         <video
+            ref="video3"
             @ended="toPause"
             autoplay
             muted
@@ -34,7 +35,7 @@
       </div>
     </template>
     <template v-else>
-      <div class="video1container" v-if="video1show">
+      <div class="video1container" v-show="video1show">
         <video
             class="video"
             @ended="video1end"
@@ -54,6 +55,7 @@
       </div>
       <div class="video2container" v-show="video3show">
         <video
+            ref="video3"
             @ended="toPause"
             autoplay
             muted
@@ -91,19 +93,26 @@ export default {
   },
   methods: {
     video1end() {
+      if (!this.video1show) {
+        return
+      }
       this.video2show = true;
       this.video1show = false;
       this.video3show = false
       sessionStorage.setItem("zhihuijieneng1", this.video1show);
     },
     toPause() {
-      console.log('toPause')
+      if (!this.video3show) {
+        return
+      }
       this.$router.push({ path:'/', query: this.$route.query});
     },
     close() {
+      this.$refs.video3.pause()
       this.video3show = true
       this.video2show = false
       this.video1show = false
+      this.$refs.video3.play()
     }
   },
 };

@@ -12,7 +12,6 @@ export const myMixins = {
         $route: {
             handler(newVal, oldVal) {
                 //判断newVal有没有值监听路由变化
-                // console.log(newVal)
                 if(newVal.query.lang == 'cn-ZH'){
                     this.lang = true
                 }else if(newVal.query.lang == 'en-US'){  //判断url参数改变中英文

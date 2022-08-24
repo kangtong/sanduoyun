@@ -45,7 +45,6 @@ export default {
     sessionStorage.setItem("yunbianxietong1", true);
     sessionStorage.setItem("zhihuijieneng1", true);
     localStorage.setItem("isShow", false);
-    console.log('create')
   },
 };
 </script>
